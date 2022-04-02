@@ -37,8 +37,8 @@ struct Zodiac
 
 void Create(Zodiac* S, Bday* B, const int N);
 void Print(Zodiac* S, Bday* B, const int N);
-void sort(Zodiac* S, Bday* B, const int N);
-void search(Zodiac* S, Bday* B, const int N, const string);
+void Sort(Zodiac* S, Bday* B, const int N);
+int Search(Zodiac* S, Bday* B, const int N, const string);
 void SaveToFile(Zodiac* p, Bday* B, const int N, const char* filename);
 void LoadFromFile(Zodiac*& p, Bday*& B, int& N, const char* filename);
 
@@ -80,7 +80,7 @@ int main()
             Print(S, B, N);
             break;
         case 3:
-            sort(S, B, N);
+            Sort(S, B, N);
             Print(S, B, N);
             break;
         case 4:
@@ -88,7 +88,7 @@ int main()
             cin.get();
             cin.sync();
             getline(cin, f_zod); cout << endl;
-            search(S, B, N, f_zod);
+            Search(S, B, N, f_zod);
             break;
         case 5:
             cin.get(); // очищуємо буфер клавіатури – бо залишаються символи
@@ -98,8 +98,8 @@ int main()
             SaveToFile(S, B, N, filename);
             break;
         case 6:
-            cin.get(); // очищуємо буфер клавіатури – бо залишаються символи
-            cin.sync(); // "кінець рядка", які не дають ввести наступний літерний рядок
+            cin.get();
+            cin.sync(); 
 
             cout << "Введіть ім'я файлу: "; cin.getline(filename, 99);
             LoadFromFile(S, B, N, filename);
@@ -159,7 +159,7 @@ void Print(Zodiac* S, Bday* B, const int N)
     }
     cout << "=========================================================================================" << endl << endl;
 }
-void sort(Zodiac* S, Bday* B, int N)
+void Sort(Zodiac* S, Bday* B, int N)
 {
     Zodiac temp;
     Bday btemp;
@@ -184,15 +184,17 @@ void sort(Zodiac* S, Bday* B, int N)
     }
 }
 
-void search(Zodiac* S, Bday* B, const int N, const string f_zod)
+int Search(Zodiac* S, Bday* B, const int N, const string f_zod)
 {
+    string zod;
     int flag = 0;
+    cout << "=========================================================================================" << endl;
+    cout << "|  №  |  Прізвище  | Імя | Знак зодіаку  |  День народження  |  Місяць  |  Рік          |" << endl;
     for (int i = 0; i < N; i++) {
         if (S[i].zodiac_sign == f_zod)
         {
             flag = 1;
-            cout << "=========================================================================================" << endl;
-            cout << "|  №  |  Прізвище  | Імя | Знак зодіаку  |  День народження  |  Місяць  |  Рік          |" << endl;
+           
             cout << "-----------------------------------------------------------------------------------------" << endl;
             cout << "|" << setw(3) << i + 1 << setw(3);
             cout << "|" << setw(4) << S[i].surname << setw(8);
@@ -201,12 +203,21 @@ void search(Zodiac* S, Bday* B, const int N, const string f_zod)
             cout << "|" << setw(6) << B[i].day << setw(12);
             cout << "|" << setw(6) << B[i].month << setw(6);
             cout << "|" << setw(10) << B[i].year << setw(6) << "|" << endl;
-            cout << "=========================================================================================" << endl << endl;
+            
         }
     }
+    cout << "=========================================================================================" << endl << endl;
     if (!flag)
         cout << "Немає людей які народились під таким знаком зодіаку" << endl;
+    return flag;
 }
+
+
+
+
+
+
+
 
 void SaveToFile(Zodiac* p, Bday* b , const int N, const char* filename)
 

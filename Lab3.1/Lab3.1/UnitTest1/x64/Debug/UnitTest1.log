@@ -1,8 +1,9 @@
 ﻿  UnitTest1.cpp
-D:\Politeh\PKR\Lab3.1\Lab3.1\Lab3.1\Lab3.1.cpp(55,6): warning C4101: 'Math': unreferenced local variable
-D:\Politeh\PKR\Lab3.1\Lab3.1\Lab3.1\Lab3.1.cpp(53,13): warning C4101: 'spec': unreferenced local variable
-D:\Politeh\PKR\Lab3.1\Lab3.1\Lab3.1\Lab3.1.cpp(54,6): warning C4101: 'Physical': unreferenced local variable
-D:\Politeh\PKR\Lab3.1\Lab3.1\Lab3.1\Lab3.1.cpp(56,6): warning C4101: 'Informatik': unreferenced local variable
-D:\Politeh\PKR\Lab3.1\Lab3.1\Lab3.1\Lab3.1.cpp(52,11): warning C4101: 'kurs': unreferenced local variable
-D:\Politeh\PKR\Lab3.1\Lab3.1\Lab3.1\Lab3.1.cpp(159,10): warning C4566: character represented by universal-character-name '\u00B2' cannot be represented in the current code page (1251)
+D:\Politeh\PKR\Lab3.1\Lab3.1\Lab3.1\Lab3.1.cpp(56,6): warning C4101: 'Math': unreferenced local variable
+D:\Politeh\PKR\Lab3.1\Lab3.1\Lab3.1\Lab3.1.cpp(54,13): warning C4101: 'spec': unreferenced local variable
+D:\Politeh\PKR\Lab3.1\Lab3.1\Lab3.1\Lab3.1.cpp(55,6): warning C4101: 'Physical': unreferenced local variable
+D:\Politeh\PKR\Lab3.1\Lab3.1\Lab3.1\Lab3.1.cpp(57,6): warning C4101: 'Informatik': unreferenced local variable
+D:\Politeh\PKR\Lab3.1\Lab3.1\Lab3.1\Lab3.1.cpp(53,11): warning C4101: 'kurs': unreferenced local variable
+D:\Politeh\PKR\Lab3.1\Lab3.1\Lab3.1\Lab3.1.cpp(163): warning C4715: 'Highest': not all control paths return a value
+     Creating library D:\Politeh\PKR\Lab3.1\Lab3.1\x64\Debug\UnitTest1.lib and object D:\Politeh\PKR\Lab3.1\Lab3.1\x64\Debug\UnitTest1.exp
   UnitTest1.vcxproj -> D:\Politeh\PKR\Lab3.1\Lab3.1\x64\Debug\UnitTest1.dll

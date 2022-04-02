@@ -1,0 +1,4 @@
+﻿  UnitTest1.cpp
+D:\Politeh\PKR\Lab3.3\Lab3.3\Lab3.3\Lab3.3.cpp(121,13): warning C4101: 'speciality': unreferenced local variable
+     Creating library D:\Politeh\PKR\Lab3.3\Lab3.3\x64\Debug\UnitTest1.lib and object D:\Politeh\PKR\Lab3.3\Lab3.3\x64\Debug\UnitTest1.exp
+  UnitTest1.vcxproj -> D:\Politeh\PKR\Lab3.3\Lab3.3\x64\Debug\UnitTest1.dll

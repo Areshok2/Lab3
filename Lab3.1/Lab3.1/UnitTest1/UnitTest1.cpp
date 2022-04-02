@@ -1,13 +1,13 @@
 
 #include "pch.h"
 #include "CppUnitTest.h"
-#include "D:\Politeh\PKR\Lab3.1\Lab3.1\Lab3.1\Lab3.1.cpp"
+#include "..\Lab3.1\Lab3.1.cpp"
 
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 
-namespace UnitTest1
+namespace UnitTestLab31
 {
-	TEST_CLASS(UnitTest1)
+	TEST_CLASS(UnitTestLab31)
 	{
 	public:
 		
@@ -19,7 +19,7 @@ namespace UnitTest1
 			
 			
 			int const i = 1;
-			Student* S = new Student[1];
+			Student* S = new Student[i];
 
 			S->prizvandname = "Yurii";
 			S->kurs = 3;
@@ -28,10 +28,10 @@ namespace UnitTest1
 			S->Math = 4;
 			S->Informatik = 4;
 			
-			int counter = SearchStudentAverageScoreAbove(S, i);
-			Assert::AreEqual(expected_stud,counter);
+			int counter = Count(S, i);
+			string max1 = Highest(S, i);
 
-			string max1 = SearchPredmetAverageScoreHighest(S, i);
+			Assert::AreEqual(expected_stud, counter);
 			Assert::AreEqual(expected_predm, max1);
 			
 		}

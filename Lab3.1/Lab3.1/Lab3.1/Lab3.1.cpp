@@ -18,6 +18,7 @@
 using namespace std;
 
 enum Specilnist { KN, INF, MathEcon, PhysInf, WORK };
+
 string predmetStr[] = { " Комп. науки  ", " Інформатика  ", "Мат. та економ", " Фіз. та інф. ", " Труд. навч.  " };
 
 
@@ -35,8 +36,8 @@ struct Student
 
 void Create(Student* s, const int N);
 void Print(Student* s, const int N);
-int SearchStudentAverageScoreAbove(Student* s, const int N);
-string SearchPredmetAverageScoreHighest(Student* s, const int N);
+int Count(Student* s, const int N);
+string Highest(Student* s, const int N);
 
 int main()
 {
@@ -59,7 +60,7 @@ int main()
 	Create(s, N);
 	Print(s, N);
 
-	int counter = SearchStudentAverageScoreAbove(s, N);
+	int counter = Count(s, N);
 
 	if (counter != 0)
 		cout << "Кількість студентів з середнім балом вище 4.5 - " << counter << endl;
@@ -68,7 +69,7 @@ int main()
 	
 	cout << endl;
 
-	cout << SearchPredmetAverageScoreHighest(s, N) << endl;
+	cout << Highest(s, N) << endl;
 	
 
 	return 0;
@@ -118,7 +119,7 @@ void Print(Student* s, const int N)
 /* 
 Обчислити кількість студентів, середній бал яких вищий за 4,5.
 */
-int SearchStudentAverageScoreAbove(Student* s, int n)
+int Count(Student* s, int n)
 {
 	int  counter = 0;
 	for (int i = 0; i < n; i++)
@@ -135,7 +136,7 @@ int SearchStudentAverageScoreAbove(Student* s, int n)
 /*
 Порівнюючи середні бали для кожного предмету, визначити предмет, середній бал якого найбільший.
 */
-string SearchPredmetAverageScoreHighest(Student* s, const int N)
+string Highest(Student* s, const int N)
 {
 	string max;
 	double inf = 0, math = 0, phys = 0;
@@ -152,15 +153,13 @@ string SearchPredmetAverageScoreHighest(Student* s, const int N)
 	F = phys / N;
 
 		if (F > M && F > I)
-			max = "physics";
+			return "physics";
 		if (M > F && M > I)
-			max = "math";
+			return "math";
 		if (I > F && I > M)
-			max = "²informatik";
+			return "informatik";
 		if (I == F && I == M)
-			max = "Всі предмети мають одинаковий середній бал";
-
-	return max;
+			return "Всі предмети мають одинаковий середній бал";
 }
 
 
