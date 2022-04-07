@@ -174,8 +174,8 @@ void Sort(Student* s, const int N)
 	for (int i = 0; i < N - 1; i++) // метод "бульбашки"
 		for (int j = 0; j < N - i - 1; j++)
 		{
-			ser = ((s[j].Physical + s[j].Math + s[j].Informatik) / 3);
-			ser1 = ((s[j + 1].Physical + s[j + 1].Math + s[j + 1].Informatik) / 3);
+			ser = ((s[j].Physical + s[j].Math + s[j].Informatik) / 3.);
+			ser1 = ((s[j + 1].Physical + s[j + 1].Math + s[j + 1].Informatik) / 3.);
 
 			if (ser > ser1
 				||
@@ -210,12 +210,12 @@ int* IndexSort(Student* s, const int N) {
 	{
 		value = I[i];
 		for (j = i - 1;
-			j >= 0 && ((((s[I[j]].Physical + s[I[j]].Math + s[I[j]].Informatik) / 3) > ((s[value].Physical + s[value].Math + s[value].Informatik) / 3))
+			j >= 0 && ((((s[I[j]].Physical + s[I[j]].Math + s[I[j]].Informatik) / 3.) > ((s[value].Physical + s[value].Math + s[value].Informatik) / 3.))
 				||
-				(((s[I[j]].Physical + s[I[j]].Math + s[I[j]].Informatik) / 3) == ((s[value].Physical + s[value].Math + s[value].Informatik) / 3) &&
+				(((s[I[j]].Physical + s[I[j]].Math + s[I[j]].Informatik) / 3.) == ((s[value].Physical + s[value].Math + s[value].Informatik) / 3.) &&
 					s[I[j]].Informatik > s[value].Informatik)
 				||
-				(((s[I[j]].Physical + s[I[j]].Math + s[I[j]].Informatik) / 3) == ((s[value].Physical + s[value].Math + s[value].Informatik) / 3) &&
+				(((s[I[j]].Physical + s[I[j]].Math + s[I[j]].Informatik) / 3.) == ((s[value].Physical + s[value].Math + s[value].Informatik) / 3.) &&
 					s[I[j]].Informatik == s[value].Informatik &&
 					s[I[j]].prizv > s[value].prizv));
 			j--)
@@ -262,7 +262,7 @@ int BinSearch(Student* s, const int N, const string prizv, const double serb, co
 	do {
 		m = (L + R) / 2;
 
-		double ser = ((s[m].Physical + s[m].Math + s[m].Informatik) / 3);
+		double ser = ((s[m].Physical + s[m].Math + s[m].Informatik) / 3.);
 		
 		if (s[m].prizv == prizv && ser == serb && s[m].Informatik == otsi)
 			return m;

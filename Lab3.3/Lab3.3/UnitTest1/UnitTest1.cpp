@@ -14,19 +14,19 @@ namespace UnitTestLab33
 		{
 			const int N = 1;
 
-			Bday* B = new Bday[N];
+
 			Zodiac* Z = new Zodiac[N];
 
-			B[0].day = 14;
-			B[0].month = 11;
-			B[0].year = 2002;
+			Z[0].date[0] = 14;
+			Z[0].date[1] = 11;
+			Z[0].date[2] = 2002;
 
 			Z[0].name = "Billy";
 			Z[0].surname = "Herington";
 			Z[0].zodiac_sign = "Scorpio";
 
 
-			Assert::IsTrue(Search(Z, B, N, "Scorpio") == 1);
+			Assert::IsTrue(Search(Z, N, "Scorpio") == 1);
 		}
 	};
 }

@@ -84,7 +84,7 @@ void Create(Student* s, const int N)
 		cout << "Студент № " << i + 1 << ":" << endl;
 		cin.get(); // очищуємо буфер клавіатури – бо залишаються символи
 		cin.sync(); // "кінець рядка", які не дають ввести наступний літерний рядок
-		cout << " прізвище та ім'я: "; getline(cin, s[i].prizvandname);
+		cout << " прізвище: "; getline(cin, s[i].prizvandname);
 		cout << " курс: "; cin >> s[i].kurs;
 		cout << "  Виберіть спеціальність (0 - Комп. науки , 1 - Інформатика , 2 - Мат. та економ , 3 - Фіз. та інф. , 4 - Труд. навч. ): "; cin >> spec;
 		s[i].spec = (Specilnist)spec;
@@ -127,8 +127,7 @@ int Count(Student* s, int n)
 		double d = s[i].Informatik + s[i].Math + s[i].Physical;
 		double dd = d / 3;
 		if (dd > 4.5) 
-			counter++;
-		
+			counter++;	
 	}
 	return counter;
 }
@@ -138,7 +137,6 @@ int Count(Student* s, int n)
 */
 string Highest(Student* s, const int N)
 {
-	string max;
 	double inf = 0, math = 0, phys = 0;
 	double I, M, F;
 	for (int i = 0; i < N; i++)
@@ -152,14 +150,17 @@ string Highest(Student* s, const int N)
 	M = math / N;
 	F = phys / N;
 
+		if (I == F && F == M && I == M)
+			return "Всі предмети мають одинаковий середній бал";
+		if (I == F || I == M || M == F)
+			return "два предмети мають одинаковий середній бал";
 		if (F > M && F > I)
 			return "physics";
 		if (M > F && M > I)
 			return "math";
 		if (I > F && I > M)
 			return "informatik";
-		if (I == F && I == M)
-			return "Всі предмети мають одинаковий середній бал";
+
 }
 
 

@@ -1,4 +1,3 @@
-
 #include "pch.h"
 #include "CppUnitTest.h"
 #include "..\Lab3.1\Lab3.1.cpp"
@@ -26,7 +25,7 @@ namespace UnitTestLab31
 			S->spec = (Specilnist)1;
 			S->Physical = 5;
 			S->Math = 4;
-			S->Informatik = 4;
+			S->Informatik = 3;
 			
 			int counter = Count(S, i);
 			string max1 = Highest(S, i);
