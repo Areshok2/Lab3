@@ -1,0 +1,5 @@
+﻿  pch.cpp
+  UnitTest1.cpp
+D:\Politeh\PKR\Lab3.2b\Lab3.2b\Lab3.2b\Lab3.2b.cpp(51,9): warning C4101: 'ispec': unreferenced local variable
+     Creating library D:\Politeh\PKR\Lab3.2b\Lab3.2b\x64\Debug\UnitTest1.lib and object D:\Politeh\PKR\Lab3.2b\Lab3.2b\x64\Debug\UnitTest1.exp
+  UnitTest1.vcxproj -> D:\Politeh\PKR\Lab3.2b\Lab3.2b\x64\Debug\UnitTest1.dll
